@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Friend Finder</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumborton">
+        <h1>Friend Finder</h1>
+        <hr />
+        <h5>Answer a few basic questions.</h5>
+        <h6>Then find the friend with the greatest compatibility!</h6>
+        <br />
+      </div>
+      <br />
+
+      <form>
+        <div class="questions">
+          <div class="row">
+            <div class="col-6">
+              <h4>Name:</h4>
+              <input
+                type="text"
+                id="profileName"
+                class="form-control"
+                placeholder="Full Name"
+              />
+            </div>
+            <div class="col-6">
+              <h4>Image:</h4>
+              <input
+                type="text"
+                class="form-control"
+                id="image"
+                placeholder="Post Your Image Link"
+              />
+            </div>
+          </div>
+          <br />
+
+          <div class="form-row align-items-center">
+            <div class="col-auto my-1">
+              <label class="mr-sm-2" for="q1"
+                >Your mind is always buzzing with unexplored ideas and
+                plans.</label
+              >
+              <select class="custom-select mr-sm-2" id="q1">
+                <option selected>Choose...</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Disagree</option>
+                <option value="3">Neutral</option>
+                <option value="4">Agree</option>
+                <option value="5">Strongly Agree</option>
+              </select>
+            </div>
+
+            <div class="col-auto my-1">
+              <label class="mr-sm-2" for="q2"
+                >Generally speaking, you rely more on your experience than your
+                imagination.</label
+              >
+              <select class="custom-select mr-sm-2" id="q2">
+                <option selected>Choose...</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Disagree</option>
+                <option value="3">Neutral</option>
+                <option value="4">Agree</option>
+                <option value="5">Strongly Agree</option>
+              </select>
+            </div>
+
+            <div class="col-auto my-1">
+              <label class="mr-sm-2" for="q3"
+                >You find it easy to stay relaxed and focused even when there is
+                some pressure.</label
+              >
+              <select class="custom-select mr-sm-2" id="q3">
+                <option selected>Choose...</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Disagree</option>
+                <option value="3">Neutral</option>
+                <option value="4">Agree</option>
+                <option value="5">Strongly Agree</option>
+              </select>
+            </div>
+
+            <div class="col-auto my-1">
+              <label class="mr-sm-2" for="q4"
+                >You rarely do something just out of sheer curiosity.</label
+              >
+              <select class="custom-select mr-sm-2" id="q4">
+                <option selected>Choose...</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Disagree</option>
+                <option value="3">Neutral</option>
+                <option value="4">Agree</option>
+                <option value="5">Strongly Agree</option>
+              </select>
+            </div>
+
+            <div class="col-auto my-1">
+              <label class="mr-sm-2" for="q5"
+                >It is often difficult for you to relate to other people’s
+                feelings.</label
+              >
+              <select class="custom-select mr-sm-2" id="q5">
+                <option selected>Choose...</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Disagree</option>
+                <option value="3">Neutral</option>
+                <option value="4">Agree</option>
+                <option value="5">Strongly Agree</option>
+              </select>
+            </div>
+
+            <div class="col-auto my-1">
+              <label class="mr-sm-2" for="q6"
+                >In a discussion, truth should be more important than people’s
+                sensitivities.</label
+              >
+              <select class="custom-select mr-sm-2" id="q6">
+                <option selected>Choose...</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Disagree</option>
+                <option value="3">Neutral</option>
+                <option value="4">Agree</option>
+                <option value="5">Strongly Agree</option>
+              </select>
+            </div>
+
+            <div class="col-auto my-1">
+              <label class="mr-sm-2" for="q7"
+                >People can rarely upset you.</label
+              >
+              <select class="custom-select mr-sm-2" id="q7">
+                <option selected>Choose...</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Disagree</option>
+                <option value="3">Neutral</option>
+                <option value="4">Agree</option>
+                <option value="5">Strongly Agree</option>
+              </select>
+            </div>
+
+            <div class="col-auto my-1">
+              <label class="mr-sm-2" for="q8"
+                >You rarely get carried away by fantasies and ideas.</label
+              >
+              <select class="custom-select mr-sm-2" id="q8">
+                <option selected>Choose...</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Disagree</option>
+                <option value="3">Neutral</option>
+                <option value="4">Agree</option>
+                <option value="5">Strongly Agree</option>
+              </select>
+            </div>
+
+            <div class="col-auto my-1">
+              <label class="mr-sm-2" for="q9"
+                >You think that everyone’s views should be respected regardless
+                of whether they are supported by facts or not.</label
+              >
+              <select class="custom-select mr-sm-2" id="q9">
+                <option selected>Choose...</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Disagree</option>
+                <option value="3">Neutral</option>
+                <option value="4">Agree</option>
+                <option value="5">Strongly Agree</option>
+              </select>
+            </div>
+
+            <div class="col-auto my-1">
+              <label class="mr-sm-2" for="q10"
+                >You feel more energetic after spending time with a group of
+                people.</label
+              >
+              <select class="custom-select mr-sm-2" id="q10">
+                <option selected>Choose...</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Disagree</option>
+                <option value="3">Neutral</option>
+                <option value="4">Agree</option>
+                <option value="5">Strongly Agree</option>
+              </select>
+            </div>
+          </div>
+          <br />
+
+          <div class="col-auto my-1">
+            <div id="abc" class="modal">
+              <div>
+                <h3 id="match">
+                  Hey, We found a match!!!!!!!!!!!!
+                </h3>
+              </div>
+
+              <div class="row">
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-12" id="myName"></div>
+                    <br />
+                    <div class="col-12" id="myImage"></div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="row">
+                    <br />
+                    <div class="col-12" id="friendName"></div>
+                    <br />
+                    <div class="col-12" id="friendImage"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12">
+                  <h4 id="congratulations">
+                    Congratulations!!!! The compatibility is 93%.
+                  </h4>
+                </div>
+                <div class="col-12">
+                  <h6 id="quote">
+                    “Friends are born, not made.” ― Henry Adams
+                  </h6>
+                </div>
+              </div>
+
+              <a href="#" rel="modal:close" id="test">Close</a>
+            </div>
+
+            <p>
+              <a href="#abc" rel="modal:open">
+                <button type="submit" class="btn btn-primary" id="submit">
+                  Submit
+                </button></a
+              >
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+
+<style>
+  body,
+  label {
+    text-align: center;
+    color: rgb(0, 191, 111);
+  }
+  form {
+    margin: auto auto;
+    color: rgb(0, 191, 111);
+  }
+
+  .container {
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+  }
+  .form-row {
+    display: inline-block;
+  }
+
+  .custom-select,
+  l {
+    width: 30%;
+    display: block;
+    margin: auto 35%;
+    padding: 0;
+    border: 2px solid black;
+  }
+
+  .form-control {
+    border: 2px solid black;
+  }
+
+  form {
+    color: rgb(36, 36, 36);
+  }
+
+  .jumborton {
+    background-color: rgb(0, 191, 111);
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .btn-primary {
+    background-color: rgb(0, 191, 111);
+  }
+
+  .img {
+    width: 80%;
+    border: 2px solid transparent;
+    height: 200px;
+  }
+
+  .modal {
+    max-height: 500px;
+    text-align: center;
+  }
+
+  #match {
+    color: rgb(66, 103, 178);
+  }
+
+  #myName,
+  #friendName {
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+  }
+  #congratulations {
+    color: rgba(235, 19, 19, 0.322);
+  }
+
+  #quote {
+    text-align: center;
+  }
+</style>
+
+<script type="text/javascript">
+  $("#submit").on("click", function(event) {
+    event.preventDefault();
+
+    
+if($("#profileName").val() == ""|| $("#image").val() == "" || $("#q1").val() == ""|| $("#q2").val() == "" || $("#q3").val() == ""||
+$("#q4").val() == "" || $("#q5").val() == ""|| $("#q6").val() == "" || $("#q7").val() == "" || 
+$("#q8").val() == "" || $("#q9").val() == "" || $("#q10").val()== ""){
+ alert("Please insert all field. All Field are required.")
+}
+else{
+  
+
+
+    var userProfile = {
+      name: $("#profileName").val(),
+      image: $("#image").val(),
+      
+      scores: [
+        $("#q1").val(),
+        $("#q2").val(),
+        $("#q3").val(),
+        $("#q4").val(),
+        $("#q5").val(),
+        $("#q6").val(),
+        $("#q7").val(),
+        $("#q8").val(),
+        $("#q9").val(),
+        $("#q10").val()
+      ]
+    };
+
+    $("#myName").text(userProfile.name);
+
+    var img = $("<img>");
+    img.attr("src", userProfile.image);
+    img.addClass("img");
+    $("#myImage").append(img);
+
+    console.log(userProfile);
+
+    $.post("/api/tables", userProfile, function(data) {
+      alert("Yay! Your Profile is listed!");
+      console.log(data);
+    });
+  
+
+  $.ajax({ url: "/api/tables", method: "GET" }).then(function(data) {
+   
+    var score = 0;
+    var diff = 0;
+    var match;
+    var matchArray = [];
+    var count = 0;
+    var scoreArray = [];
+    var index = data.length - 1;
+    for (var i = 0; i < data.length - 1; i++) {
+      // console.log(data[i].name, data[index].name )
+      var friend = data[i].name;
+      var friendImage = data[i].image;
+      for (var j = 0; j < 10; j++) {
+        score += Math.abs(data[i].scores[j] - data[index].scores[j]);
+        count++;
+
+        if (count === 10) {
+          scoreArray.push(score);
+          match = {
+            name: friend,
+            image: friendImage,
+            points: score
+          };
+          count = 0;
+          score = 0;
+          matchArray.push(match);
+        }
+        
+      }
+    }
+
+    console.log(matchArray);
+    console.log(scoreArray);
+
+    for (var i = 0; i < matchArray.length; i++) {
+      if (Math.min.apply(Math, scoreArray) === matchArray[i].points) {
+        console.log(matchArray[i].name);
+        console.log(matchArray[i].image);
+
+        $("#friendName").text(matchArray[i].name);
+
+        var img = $("<img>");
+        img.attr("src", matchArray[i].image);
+        img.addClass("img");
+        $("#friendImage").append(img);
+
+        return;
+      }
+    }
+  });
+};
+
+});
+
+$("#test").on("click", function(){
+  
+  console.log("Working");
+})
+
+ 
+</script>

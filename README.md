@@ -2,6 +2,8 @@
 
 In this application, I build a app which finds the best compatible friends. This application takes user input and based on those data, a compatible friend is searched and displayed.
 
+![](Capture.JPG)
+
 ### Technology Used
 1. HTML, CSS, JavaScript, jQuery
 2. Node Server

@@ -4,7 +4,7 @@
   "description": "In this application, I build a app which finds the best compatible friends. This application takes user input and based on those data, a compatible friend is searched and displayed.",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "mysql": "^2.16.0"
   },
   "devDependencies": {},
